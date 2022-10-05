@@ -1,0 +1,81 @@
+@use "./variables" as *;
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $transperant-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    margin: 0 25%;
+    border-radius: 25px;
+    div {
+        padding: 0 2.5em;
+
+        img {
+            margin: 1em 0;
+        }
+
+        h2 {
+            font-family: $BigShouldersDisplay-SemiBold;
+            color: $very-light-gray;
+            font-size: 2em;
+            margin: 1em 0;
+        }
+        p {
+            font-family: $LexendDeca-Regular;
+            color: $transperant-white;
+            font-size: 15px;
+            margin: 1em 0;
+            padding: 5px;
+            line-height: 1.75em;
+        }
+        button {
+            padding: .75em 2em;
+            border-radius: 2em;
+            font-size: 1em;
+            border: 2px solid $transperant-white;
+            margin: 3em 0;
+        }
+    }
+    .sedans {
+        background-color: $bright-orange;
+        button {
+            color: $bright-orange;
+        }
+    }
+    .suvs {
+        background-color: $dark-cyan;
+        button {
+            color: $dark-cyan;
+        }
+    }
+    .luxury {
+        background-color: $very-dark-cyan;
+        button {
+            color: $very-dark-cyan;
+        }
+    }
+}
+
+@media only screen and (max-width: $Tablet) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: $Mobile) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+    }
+} 
+
